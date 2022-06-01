@@ -76,6 +76,9 @@ a img {
     border-radius: 10px;
     padding: 5px;
     width: 400px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 a img:hover {
@@ -96,7 +99,7 @@ table.descrip {
     border-spacing: 0px;
     text-align: center;
     width: 600px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: rgb(104, 167, 104);
 }
 
@@ -104,4 +107,85 @@ table.descrip td {
     border: 1px solid black;
     width: 100px;
     height: 25px;
+}
+
+.container {
+    width: auto;
+}
+
+.header {
+    height: 80px;
+    background: #16222A;
+    background: -webkit-linear-gradient(to right, #3A6073, #16222A);
+    background: linear-gradient(to right, #3A6073, #16222A);
+}
+
+.header a {
+    color: white;
+}
+
+.logo {
+    float: left;
+    margin: 10px;
+
+}
+
+.header ul {
+
+    float: right;
+    display: inline-flex;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+.header ul li {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.content .main {
+    text-align: center;
+    height: 500px;
+}
+
+.cat_keyboard,
+.cat_mouse,
+.cat_headphone {
+    display: inline-table;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+.footer {
+    clear: both;
+    height: 30px;
+    background-color: #10813b;
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+body h3 {
+    clear: both;
+}
+
+.button_buy {
+    background-color: #4CAF50;
+    border: 1px solid green;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button_buy:hover {
+    background-color: #56c95a;
+}
+
+.button_buy:active {
+    background-color: #367e39;
 }
