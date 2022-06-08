@@ -1,4 +1,6 @@
-#block {
+#block_h1,
+#block_h2,
+#block_h3 {
   color: black;
   font-size: 18px;
   font-weight: 400;
