@@ -4,7 +4,7 @@
   color: black;
   font-size: 18px;
   font-weight: 400;
-  background-color: #eaeaea;
+  background: rgba(215, 255, 215, 0.4);
 }
 a {
   text-decoration: none;
@@ -23,11 +23,14 @@ a img:hover {
   border-color: transparent;
 }
 body {
-  background: #f8f8f8;
+  background-color: #87f08b;
   height: 100%;
 }
 body h2 {
   clear: both;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 html {
   height: 100%;
@@ -109,6 +112,11 @@ ul a:hover {
 .content .main {
   text-align: center;
   height: 500px;
+}
+.content .main h1,
+.content .main h2 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #074724;
 }
 .footer {
   flex: 0 0 auto;

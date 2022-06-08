@@ -1,3 +1,7 @@
+<?php
+  include 'php/menu.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,9 +21,10 @@
     <div class="header">
       <div class="logo"><img src="/img/logo.png" alt="logo"></div>
       <ul class="menu">
-        <li><a href="/index.html">Главная</a></li>
-        <li><a href="/catalog.html">Каталог</a></li>
-        <li><a href="/contacts.html">Контакты</a></li>
+        <?php
+        foreach ($arMenu as $item) { ?>
+          <li><a href="<?= $item["link"] ?>"><?= $item["name"] ?></a></li>
+        <?php } ?>
       </ul>
     </div>
 
@@ -27,19 +32,17 @@
       <div class="category" style="text-align: center;">
         <div class="cat_keyboard">
           <img src="/img/blackwidow-v3-mini-hyperspeed-phantom.jpg" alt="Blackwidow v3 Mini Hyperspeed Phantom">
-          <p class="categ"><a href="/products/keyboard/blackwidow-v3-mini-hyperspeed-phantom.html">Клавиатура Blackwidow
-              v3 Mini
-              Hyperspeed Phantom</a></p>
+          <p class="categ"><a href="/products/keyboard/blackwidow-v3-mini-hyperspeed-phantom.php">Клавиатура Blackwidow v3 Mini Hyperspeed Phantom</a></p>
         </div>
 
         <div class="cat_mouse">
           <img src="img/deathadder-pro-v2.jpg" alt="Deathhadder Pro V2">
-          <p class="categ"><a href="/products/mouse/deathadder-pro-v2.html">Мышь DEATHHADDER PRO V2</a></p>
+          <p class="categ"><a href="/products/mouse/deathadder-pro-v2.php">Мышь DEATHHADDER PRO V2</a></p>
         </div>
 
         <div class="cat_headphone">
           <img src="/img/kraken-multi-platform-green.jpg" alt="Deathhadder Pro V2">
-          <p class="categ"><a href="/products/headphone/kraken-multi-platform-green.html">Наушники KRAKEN MULTI-PLATFORM
+          <p class="categ"><a href="/products/headphone/kraken-multi-platform-green.php">Наушники KRAKEN MULTI-PLATFORM
               GREEN</a></p>
         </div>
       </div>

@@ -1,3 +1,7 @@
+<?php
+include 'php/menu.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,16 +22,17 @@
     <div class="header">
       <div class="logo"><img src="/img/logo.png" alt="logo"></div>
       <ul class="menu">
-        <li><a href="/index.html">Главная</a></li>
-        <li><a href="/catalog.html">Каталог</a></li>
-        <li><a href="/contacts.html">Контакты</a></li>
+        <?php
+        foreach ($arMenu as $item) { ?>
+          <li><a href="<?= $item["link"] ?>"><?= $item["name"] ?></a></li>
+        <?php } ?>
       </ul>
     </div>
 
     <div class="content">
       <div class="main">
-        <h1 class="big-text">GADJET MARKET</h1>
-        <p>Интернет-магазин компьютеров и компьютерных комплектующих</p>
+        <h1>GADJET MARKET</h1>
+        <h2>Интернет-магазин компьютеров и компьютерных комплектующих</h2>
       </div>
     </div>
 

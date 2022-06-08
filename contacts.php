@@ -1,3 +1,7 @@
+<?php
+  include 'php/menu.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,9 +25,10 @@
     <div class="header">
       <div class="logo"><img src="/img/logo.png" alt="logo"></div>
       <ul class="menu">
-        <li><a href="/index.html">Главная</a></li>
-        <li><a href="/catalog.html">Каталог</a></li>
-        <li><a href="/contacts.html">Контакты</a></li>
+        <?php
+        foreach ($arMenu as $item) { ?>
+          <li><a href="<?= $item["link"] ?>"><?= $item["name"] ?></a></li>
+        <?php } ?>
       </ul>
     </div>
 
@@ -58,8 +63,7 @@
         <p>Телефон: 8-800-800-80-80</p>
         <p>Адрес: Россия, Санкт-Петербург, Дворцовая площадь</p>
         <p>E-mail: gadjet.market@info.com</p>
-        <script type="text/javascript" charset="utf-8" async
-          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af3bea407f9434bd7169e2abfa974108951947e88e3fbd629839a2b7e4b9f4a49&amp;width=100%&amp;height=374&amp;lang=ru_RU&amp;scroll=true"></script>
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af3bea407f9434bd7169e2abfa974108951947e88e3fbd629839a2b7e4b9f4a49&amp;width=100%&amp;height=374&amp;lang=ru_RU&amp;scroll=true"></script>
       </fieldset>
     </div>
 
