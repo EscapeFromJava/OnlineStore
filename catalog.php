@@ -1,8 +1,6 @@
 <?php
-  include 'php/menu.php';
-?>
-
-<!DOCTYPE html>
+  include 'main/menu.php';
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
