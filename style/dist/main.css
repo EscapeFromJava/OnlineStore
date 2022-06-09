@@ -45,7 +45,6 @@ ul a:hover {
   color: #046304;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   resize: none;
-  text-transform: capitalize;
 }
 .button_buy {
   background-color: #4CAF50;
@@ -146,7 +145,10 @@ ul a:hover {
   height: 25px;
   color: #046304;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  text-transform: capitalize;
+  display: block;
+}
+.field::first-letter {
+  text-transform: uppercase;
 }
 .full_desc {
   color: #242424;

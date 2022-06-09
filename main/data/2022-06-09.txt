@@ -1,0 +1,12 @@
+*** 20:02:09 ***
+name=Вася
+phone=+795351253
+email=vorobey@google.com
+topic=other
+comment=все супер!
+*** 20:02:55 ***
+name=Вася
+phone=+795351253
+email=vorobey@google.com
+topic=other
+comment=все супер!

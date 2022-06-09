@@ -31,20 +31,20 @@
     </div>
 
     <div class="content">
-      <form action="">
+      <form action="/main/feedback.php">
         <fieldset>
           <legend>НАПИШИТЕ НАМ</legend>
-          <p><input class="field" type="name" placeholder="Ваше имя:"></p>
-          <p><input class="field" type="phone" placeholder="Телефон:"></p>
+          <p><input class="field" type="name" placeholder="Ваше имя:" name="name"></p>
+          <p><input class="field" type="phone" placeholder="Телефон:" name="phone"></p>
           <p>
-            <center> Не звонить?<input type="checkbox"></center>
+            <center> Не звонить?<input type="checkbox" name="not_call"></center>
           </p>
-          <p><input class="field" type="email" placeholder="E-mail:"></p>
+          <p><input class="field" type="email" placeholder="E-mail:" name="email"></p>
           <p><select name="topic">
               <option svalue="" disabled selected>Выберите тему</option>
-              <option value="mo">Сделать заказ</option>
-              <option value="ss">Предложения и пожелания</option>
-              <option value="oth">Другое</option>
+              <option value="make_order">Сделать заказ</option>
+              <option value="suggestions">Предложения и пожелания</option>
+              <option value="other">Другое</option>
             </select></p>
           <p><textarea class="area" name="comment" cols="40" rows="11" placeholder="Комментарий:"></textarea></p>
           <p>
