@@ -35,22 +35,25 @@ include 'main/functions.php';
         <h1>GADJET MARKET</h1>
         <h2>Интернет-магазин компьютеров и компьютерных комплектующих</h2>
 
-        <div class="code" style="border: 1px solid green;">
+        <fieldset>
+          <legend>TEST AREA</legend>
           <?php
 
           print 'Summa = ' . sum(5, 3); ?><br><?php
           print 'Circle area = ' . getAreaCircle(10); ?><br><?php
           print 'Rectangle area = ' . getAreaRectangle(4, 7); ?><br><?php
-
+          print current_date . ' ' . date("H:m:s"); ?><br><?php
+          print 'ROFL = ' . sum(date("m"), date("s")); ?><br><?php
+          
           ?>
-        </div>
-
+        </fieldset>
       </div>
     </div>
+  </div>
 
-    <div class="footer">
-      <p>&copy;"Все права защищены"</p>
-    </div>
+  <div class="footer">
+    <p>&copy;"Все права защищены"</p>
+  </div>
 
   </div>
 

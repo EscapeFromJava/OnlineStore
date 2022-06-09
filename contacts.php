@@ -1,6 +1,8 @@
 <?php
-  include 'main/menu.php';
-?><!DOCTYPE html>
+include 'main/menu.php';
+include 'main/functions.php';
+?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,11 +12,6 @@
   <title>Контакты</title>
   <link rel="stylesheet" href="/style/dist/main.css">
   <link rel="stylesheet" href="/style/dist/normalize.css">
-  <style>
-    form {
-      float: left;
-    }
-  </style>
 </head>
 
 <body>
@@ -31,7 +28,7 @@
     </div>
 
     <div class="content">
-      <form action="/main/feedback.php">
+      <form action="/main/feedback.php" method="post">
         <fieldset>
           <legend>НАПИШИТЕ НАМ</legend>
           <p><input class="field" type="name" placeholder="Ваше имя:" name="name"></p>

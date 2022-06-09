@@ -10,3 +10,27 @@ phone=+795351253
 email=vorobey@google.com
 topic=other
 comment=все супер!
+*** 20:11:32 ***
+name=John
+phone=+2946513651
+not_call=on
+email=john@mail.ru
+topic=suggestions
+comment=improve design!!!111
+*** 20:13:05 ***
+name=sdfsdfs
+phone=sdfsdf
+email=gdfg@ya.ru
+comment=dsfdsfdsf
+*** 20:23:33 ***
+name=artur
+phone=324234234
+email=sdfd@ya.ru
+comment=sfsdf
+*** 20:25:11 ***
+name=sdfsdf
+phone=324234
+email=
+comment=
+*** 20:25:19 ***
+*** 20:26:05 ***
