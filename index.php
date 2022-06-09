@@ -1,6 +1,8 @@
 <?php
-  include 'main/menu.php';
-?><!DOCTYPE html>
+include 'main/menu.php';
+include 'main/functions.php';
+?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -32,6 +34,17 @@
       <div class="main">
         <h1>GADJET MARKET</h1>
         <h2>Интернет-магазин компьютеров и компьютерных комплектующих</h2>
+
+        <div class="code" style="border: 1px solid green;">
+          <?php
+
+          print 'Summa = ' . sum(5, 3); ?><br><?php
+          print 'Circle area = ' . getAreaCircle(10); ?><br><?php
+          print 'Rectangle area = ' . getAreaRectangle(4, 7); ?><br><?php
+
+          ?>
+        </div>
+
       </div>
     </div>
 
