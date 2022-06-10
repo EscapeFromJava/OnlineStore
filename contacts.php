@@ -17,11 +17,7 @@ include 'main/paths.php';
 
   <div class="container">
 
-    <?php
-
-    require_once $header_path;
-
-    ?>
+    <?php require_once $header_path;?>
 
     <div class="content">
       <form action="/main/feedback.php" method="post" enctype="multipart/form-data">
@@ -62,11 +58,7 @@ include 'main/paths.php';
       </fieldset>
     </div>
 
-    <?php
-
-    require_once $footer_path;
-
-    ?>
+    <?php require_once $footer_path;?>
 
   </div>
 

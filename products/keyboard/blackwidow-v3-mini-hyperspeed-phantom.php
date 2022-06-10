@@ -17,11 +17,7 @@ include '../../main/paths.php';
 
   <div class="container">
 
-  <?php
-
-require_once $header_path;
-
-?>
+  <?php require_once $header_path;?>
 
     <div class="content">
       <h1 id="block_h1">Клавиатура RAZER BLACKWIDOW V3 MINI HYPERSPEED - PHANTOM EDITION</h1>
@@ -170,11 +166,7 @@ require_once $header_path;
       </div>
     </div>
 
-    <?php
-
-    require_once $footer_path;
-
-    ?>
+    <?php require_once $footer_path;?>
 
 
   </div>
