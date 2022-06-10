@@ -17,9 +17,10 @@ include 'main/paths.php';
 
   <div class="container">
 
-    <?php require_once $header_path;?>
+    <?php require_once $header_path; ?>
 
     <div class="content">
+
       <form action="/main/feedback.php" method="post" enctype="multipart/form-data">
         <fieldset>
           <legend>НАПИШИТЕ НАМ</legend>
@@ -56,9 +57,10 @@ include 'main/paths.php';
         <p>E-mail: gadjet.market@info.com</p>
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af3bea407f9434bd7169e2abfa974108951947e88e3fbd629839a2b7e4b9f4a49&amp;width=100%&amp;height=374&amp;lang=ru_RU&amp;scroll=true"></script>
       </fieldset>
+
     </div>
 
-    <?php require_once $footer_path;?>
+    <?php require_once $footer_path; ?>
 
   </div>
 

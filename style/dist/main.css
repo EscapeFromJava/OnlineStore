@@ -88,24 +88,6 @@ ul a:hover {
   flex-direction: column;
   height: 100%;
 }
-.header {
-  flex: 0 0 auto;
-  height: 80px;
-  background: linear-gradient(to right, #3A6073, #16222A);
-}
-.header a {
-  color: white;
-}
-.header ul {
-  float: right;
-  display: inline-flex;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 20px;
-}
-.header ul li {
-  margin-left: 10px;
-  margin-right: 10px;
-}
 .content {
   flex: 1 0 auto;
   width: 1200px;
@@ -120,16 +102,6 @@ ul a:hover {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: #074724;
 }
-.footer {
-  flex: 0 0 auto;
-  clear: both;
-  height: 30px;
-  background-color: #10813b;
-  text-align: right;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-}
 .descrip {
   border: 2px solid black;
   border-spacing: 0px;
@@ -142,6 +114,16 @@ ul a:hover {
   border: 1px solid black;
   width: 100px;
   height: 25px;
+}
+.footer {
+  flex: 0 0 auto;
+  clear: both;
+  height: 30px;
+  background-color: #10813b;
+  text-align: right;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
 }
 .field {
   width: 300px;
@@ -159,6 +141,24 @@ ul a:hover {
   font-weight: 400;
   line-height: 24px;
   text-align: left;
+}
+.header {
+  flex: 0 0 auto;
+  height: 80px;
+  background: linear-gradient(to right, #3A6073, #16222A);
+}
+.header a {
+  color: white;
+}
+.header ul {
+  float: right;
+  display: inline-flex;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+}
+.header ul li {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .logo {
   float: left;
