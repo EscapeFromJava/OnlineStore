@@ -1,6 +1,5 @@
 <?php
-include 'main/menu.php';
-include 'main/functions.php';
+include 'main/paths.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,40 +19,24 @@ include 'main/functions.php';
 
   <div class="container">
 
-    <div class="header">
-      <div class="logo"><img src="/img/logo.png" alt="logo"></div>
-      <ul class="menu">
-        <?php
-        foreach ($arMenu as $item) { ?>
-          <li><a href="<?= $item["link"] ?>"><?= $item["name"] ?></a></li>
-        <?php } ?>
-      </ul>
-    </div>
+    <?php
+
+    require_once $header_path;
+
+    ?>
 
     <div class="content">
       <div class="main">
         <h1>GADJET MARKET</h1>
         <h2>Интернет-магазин компьютеров и компьютерных комплектующих</h2>
-
-        <fieldset>
-          <legend>TEST AREA</legend>
-          <?php
-
-          print 'Summa = ' . sum(5, 3); ?><br><?php
-          print 'Circle area = ' . getAreaCircle(10); ?><br><?php
-          print 'Rectangle area = ' . getAreaRectangle(4, 7); ?><br><?php
-          print current_date . ' ' . date("H:m:s"); ?><br><?php
-          print 'ROFL = ' . sum(date("m"), date("s")); ?><br><?php
-          
-          ?>
-        </fieldset>
       </div>
     </div>
-  </div>
 
-  <div class="footer">
-    <p>&copy;"Все права защищены"</p>
-  </div>
+    <?php
+
+    require_once $footer_path;
+
+    ?>
 
   </div>
 

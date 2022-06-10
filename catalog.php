@@ -1,6 +1,7 @@
 <?php
-  include 'main/menu.php';
-?><!DOCTYPE html>
+include 'main/paths.php';
+?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -16,15 +17,11 @@
 
   <div class="container">
 
-    <div class="header">
-      <div class="logo"><img src="/img/logo.png" alt="logo"></div>
-      <ul class="menu">
-        <?php
-        foreach ($arMenu as $item) { ?>
-          <li><a href="<?= $item["link"] ?>"><?= $item["name"] ?></a></li>
-        <?php } ?>
-      </ul>
-    </div>
+    <?php
+
+    require_once $header_path;
+
+    ?>
 
     <div class="content">
       <div class="category" style="text-align: center;">
@@ -46,9 +43,11 @@
       </div>
     </div>
 
-    <div class="footer">
-      <p>&copy;"Все права защищены"</p>
-    </div>
+    <?php
+
+    require_once $footer_path;
+
+    ?>
 
   </div>
 

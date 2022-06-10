@@ -1,6 +1,5 @@
 <?php
-include 'main/menu.php';
-include 'main/functions.php';
+include 'main/paths.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,18 +16,15 @@ include 'main/functions.php';
 <body>
 
   <div class="container">
-    <div class="header">
-      <div class="logo"><img src="/img/logo.png" alt="logo"></div>
-      <ul class="menu">
-        <?php
-        foreach ($arMenu as $item) { ?>
-          <li><a href="<?= $item["link"] ?>"><?= $item["name"] ?></a></li>
-        <?php } ?>
-      </ul>
-    </div>
+
+    <?php
+
+    require_once $header_path;
+
+    ?>
 
     <div class="content">
-      <form action="/main/feedback.php" method="post">
+      <form action="/main/feedback.php" method="post" enctype="multipart/form-data">
         <fieldset>
           <legend>НАПИШИТЕ НАМ</legend>
           <p><input class="field" type="name" placeholder="Ваше имя:" name="name"></p>
@@ -44,6 +40,10 @@ include 'main/functions.php';
               <option value="other">Другое</option>
             </select></p>
           <p><textarea class="area" name="comment" cols="40" rows="11" placeholder="Комментарий:"></textarea></p>
+          <div>
+            <label for="file">Анкета</label>
+            <input type="file" id="file" name="anketa">
+          </div>
           <p>
             <center>
               <input type="submit" value="Отправить">
@@ -62,9 +62,11 @@ include 'main/functions.php';
       </fieldset>
     </div>
 
-    <div class="footer">
-      <p>&copy;"Все права защищены"</p>
-    </div>
+    <?php
+
+    require_once $footer_path;
+
+    ?>
 
   </div>
 
