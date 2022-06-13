@@ -30,6 +30,9 @@ include '../../main/paths.php';
         открывает
         новую эру господства благодаря полной свободе движений и контроля.
       </p>
+      <div class="price">
+        <p>Цена: 8000 рублей</p>
+      </div>
       <input class="button_buy" type="button" value="Купить">
 
       <h2 id="block_h2">Характеристики товара</h2>

@@ -167,6 +167,25 @@ ul a:hover {
 .menu {
   list-style-type: none;
 }
+.price {
+  color: #0a330d;
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.registr,
+.login {
+  width: 20%;
+  margin: 0 auto;
+  text-align: left;
+}
+.registr p,
+.login p {
+  margin: 0 0 10px 0;
+}
+.registr input,
+.login input {
+  width: 200px;
+}
 .short_desc {
   color: #707070;
   font-size: 14px;

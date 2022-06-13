@@ -14,8 +14,12 @@ $arMenu = [
     "link" => "/contacts.php"
   ],
   [
+    "name" => "Регистрация",
+    "link" => "/profile/registration.php"
+  ],
+  [
     "name" => "Авторизация",
-    "link" => "/profile/index.php"
+    "link" => "/profile/login.php"
   ]
 ];
 
@@ -26,7 +30,10 @@ $arMenu = [
   <ul class="menu">
     <?php
     foreach ($arMenu as $item) {
-      if ($item["name"] == "Авторизация") { ?>
+      if ($item["name"] == "Регистрация") { ?>
+        <li><a style="color: yellow;" href="<?= $item["link"] ?> "><?= $item["name"] ?></a></li>
+      <?php }
+      else if ($item["name"] == "Авторизация") { ?>
         <li><a style="color: red;" href="<?= $item["link"] ?> "><?= $item["name"] ?></a></li>
       <?php } else { ?>
         <li><a href="<?= $item["link"] ?>"><?= $item["name"] ?></a></li>

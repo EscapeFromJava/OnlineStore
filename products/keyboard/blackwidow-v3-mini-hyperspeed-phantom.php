@@ -17,7 +17,7 @@ include '../../main/paths.php';
 
   <div class="container">
 
-  <?php require_once $header_path;?>
+    <?php require_once $header_path; ?>
 
     <div class="content">
       <h1 id="block_h1">Клавиатура RAZER BLACKWIDOW V3 MINI HYPERSPEED - PHANTOM EDITION</h1>
@@ -30,6 +30,9 @@ include '../../main/paths.php';
         V3 Mini HyperSpeed. Наслаждайтесь безупречной игрой в элегантном корпусе с беспроводной 65% механической игровой
         клавиатурой с идеальным балансом формы и функций.
       </p>
+      <div class="price">
+        <p>Цена: 12000 рублей</p>
+      </div>
       <input class="button_buy" type="button" value="Купить">
 
       <h2 id="block_h2">Характеристики товара</h2>
@@ -166,7 +169,7 @@ include '../../main/paths.php';
       </div>
     </div>
 
-    <?php require_once $footer_path;?>
+    <?php require_once $footer_path; ?>
 
 
   </div>
