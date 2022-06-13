@@ -65,10 +65,8 @@ ul a:hover {
 .button_buy:active {
   background-color: #367e39;
 }
-.cat_keyboard,
-.cat_mouse,
-.cat_headphone {
-  display: inline-table;
+.cat {
+  display: inline;
   margin-left: 20px;
   margin-right: 20px;
 }
