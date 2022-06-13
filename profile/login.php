@@ -32,7 +32,7 @@ include '../main/paths.php';
                                 <p><input type="text" name="login"></p>
                                 <p>Пароль</p>
                                 <p><input type="password" name="password"></p>
-                                <p><input class="button" type="submit" value="Войти"></p>
+                                <p><input class="button" type="submit" value="Войти"></p>                                
                             </fieldset>
                         </form>
                     </div>

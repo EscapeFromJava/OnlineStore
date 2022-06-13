@@ -1,27 +1,55 @@
 <?php
+if (!isset($_SESSION)) {
+  session_start();
+}
+if (isset($_SESSION['name'])) {
+  $arMenu = [
+    [
+      "name" => "Регистрация",
+      "link" => "/profile/registration.php"
+    ],
+    [
+      "name" => "Главная",
+      "link" => "/index.php"
+    ],
+    [
+      "name" => "Каталог",
+      "link" => "/catalog.php"
+    ],
+    [
+      "name" => "Контакты",
+      "link" => "/contacts.php"
+    ],
+    [
+      "name" => $_SESSION['name'],
+      "link" => "/profile/logout.php"
+    ]
+  ];
+} else {
+  $arMenu = [
+    [
+      "name" => "Регистрация",
+      "link" => "/profile/registration.php"
+    ],
+    [
+      "name" => "Главная",
+      "link" => "/index.php"
+    ],
+    [
+      "name" => "Каталог",
+      "link" => "/catalog.php"
+    ],
+    [
+      "name" => "Контакты",
+      "link" => "/contacts.php"
+    ],
+    [
+      "name" => 'Авторизация',
+      "link" => "/profile/login.php"
+    ]
+  ];
+}
 
-$arMenu = [
-  [
-    "name" => "Главная",
-    "link" => "/index.php"
-  ],
-  [
-    "name" => "Каталог",
-    "link" => "/catalog.php"
-  ],
-  [
-    "name" => "Контакты",
-    "link" => "/contacts.php"
-  ],
-  [
-    "name" => "Регистрация",
-    "link" => "/profile/registration.php"
-  ],
-  [
-    "name" => "Авторизация",
-    "link" => "/profile/login.php"
-  ]
-];
 
 ?>
 
@@ -32,8 +60,7 @@ $arMenu = [
     foreach ($arMenu as $item) {
       if ($item["name"] == "Регистрация") { ?>
         <li><a style="color: yellow;" href="<?= $item["link"] ?> "><?= $item["name"] ?></a></li>
-      <?php }
-      else if ($item["name"] == "Авторизация") { ?>
+      <?php } else if ($item["name"] == "Авторизация") { ?>
         <li><a style="color: red;" href="<?= $item["link"] ?> "><?= $item["name"] ?></a></li>
       <?php } else { ?>
         <li><a href="<?= $item["link"] ?>"><?= $item["name"] ?></a></li>
@@ -45,16 +72,16 @@ $arMenu = [
 <?php
 
 //========================работа с сессиями
-session_start();
+// session_start();
 
 // $_SESSION[""];
 
 //========================работа с Cookies
-$visit_count = 1;
-if (isset($_SESSION["visit_count"])) {
-  $visit_count = $_SESSION["visit_count"] + 1;
-}
-$_SESSION["visit_count"] = $visit_count;
+// $visit_count = 1;
+// if (isset($_SESSION["visit_count"])) {
+//   $visit_count = $_SESSION["visit_count"] + 1;
+// }
+// $_SESSION["visit_count"] = $visit_count;
 
 // print "Кол-во посещений: " . $visit_count;
 
@@ -67,11 +94,11 @@ $_SESSION["visit_count"] = $visit_count;
 
 //========================хэширование
 
-$password = "kolokol!23";
-$hash = password_hash($password, PASSWORD_DEFAULT);
+// $password = "kolokol!23";
+// $hash = password_hash($password, PASSWORD_DEFAULT);
 // print $hash;
 // получили из базы $hash
-$isVerify = password_verify($password, $hash);
+// $isVerify = password_verify($password, $hash);
 // print $isVerify;
 
 ?>

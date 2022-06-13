@@ -29,6 +29,5 @@ define('current_date', date("Y-m-d"));
 
     function printFeedbackData() {
         print_r(getFeedbackData());
-    }
-    
+    }    
 ?>

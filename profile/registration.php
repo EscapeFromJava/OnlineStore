@@ -25,7 +25,7 @@ include '../main/paths.php';
             <div class="main">
                 <h1>Регистрация</h1>
                 <div class="registr">
-                    <form action="" method="post" enctype="multipart/form-data">
+                    <form action="../main/registration.php" method="POST" enctype="multipart/form-data">
                         <fieldset>
                             <p>Имя *</p>
                             <p><input type="text" name="name"></p>
