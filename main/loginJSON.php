@@ -1,46 +1,29 @@
 <?php
 include '../main/paths.php';
-
+if (!isset($_SESSION)) {
+    session_start();
+}
 // сохраняем в локальные переменные данные пользователя
 $currentLogin = $_POST['login'];
 $currentPassword = $_POST['password'];
 
-require_once($_SERVER["DOCUMENT_ROOT"] . '/main/dbconnector.php');
+$json_path = $_SERVER["DOCUMENT_ROOT"] . '/main/users.json';
+// считываем весь файл users.json
+$data = file_get_contents($json_path);
+// преобразуем в массив
+$arUsers = json_decode($data, true);
 
-// $sql = "SELECT * FROM users WHERE LOGIN = '{$currentLogin}';";
-$sql = "SELECT * FROM users WHERE LOGIN = '{$currentLogin}';";
-$result = mysqli_query($link, $sql);
-
-$userSQL = [];
-while ($row = mysqli_fetch_array($result)) {
-    $userSQL = [
-        "FIO" => $row['FIO'],
-        "LOGIN" => $row['LOGIN'],
-        "PASSWORD" => $row['PASS_WORD'],
-        "EMAIL" => $row['EMAIL']
-    ];
-}
-
-foreach ($userSQL as $key => $value) {
-    if ($key == 'FIO') {
-        $fioSQL = $value;
-    } else if ($key == 'LOGIN') {
-        $loginSQL = $value;
-    } else if ($key == 'PASSWORD') {
-        $passwordSQL = $value;
+foreach ($arUsers as $name => $val) {
+    if ($currentLogin == $val['login']) {
+        if (password_verify($currentPassword, $val['password'])) {
+            $_SESSION['name'] = $val['name'];
+            $_SESSION['login'] = $currentLogin;
+        }
     }
 }
 
-if (!isset($_SESSION)) {
-    session_start();
-}
-
-if (!empty($passwordSQL)) {
-    if (password_verify($currentPassword, $passwordSQL)) {
-        $_SESSION['name'] = $fioSQL;
-        $_SESSION['login'] = $loginSQL;
-        $loginInfo = 'Авторизация прошла успешно!';
-    }
+if (isset($_SESSION['name'])) {
+    $loginInfo = 'Авторизация прошла успешно!';
 } else {
     $loginInfo = 'Неверные данные!';
 }

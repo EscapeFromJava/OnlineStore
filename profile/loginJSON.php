@@ -26,19 +26,17 @@ include '../main/paths.php';
                 <div id="profile">
                     <h1>Авторизация</h1>
                     <div class="login">
-                        <form action="../main/login.php" method="POST" enctype="multipart/form-data">
+                        <form action="../main/loginJSON.php" method="POST" enctype="multipart/form-data">
                             <fieldset>
                                 <p>Логин</p>
                                 <p><input type="text" name="login"></p>
                                 <p>Пароль</p>
                                 <p><input type="password" name="password"></p>
-                                <p><input class="button" type="submit" value="Войти"></p>
+                                <p><input class="button" type="submit" value="Войти"></p>                                
                             </fieldset>
                         </form>
                     </div>
-
                 </div>
-
             </div>
         </div>
 

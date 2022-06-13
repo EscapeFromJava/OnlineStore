@@ -19,7 +19,7 @@ include 'main/paths.php';
 
   <div class="container">
 
-    <?php require_once $header_path;?>
+    <?php require_once $header_path; ?>
 
     <div class="content">
       <div class="main">
@@ -28,7 +28,7 @@ include 'main/paths.php';
       </div>
     </div>
 
-    <?php require_once $footer_path;?>
+    <?php require_once $footer_path; ?>
 
   </div>
 
