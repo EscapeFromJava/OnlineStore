@@ -28,7 +28,6 @@ $arProducts = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
     <div class="content">
       <div class="category" style="text-align: center;">
-
         <?php
         foreach ($arProducts as $key => $value) {
           $currentID = $arProducts[$key]['ID'];
@@ -40,7 +39,7 @@ $arProducts = mysqli_fetch_all($result, MYSQLI_ASSOC);
         ?>
           <div class="cat">
             <img src="<?= $currentImage ?>" alt="">
-            <p class="categ"><a href="<?= $link . '/id=' . $currentID?>"><?= $currentName ?></a></p>
+            <p class="categ"><a href="<?= $link . '/id=' . $currentID ?>"><?= $currentName ?></a></p>
           </div>
         <?php
         }
