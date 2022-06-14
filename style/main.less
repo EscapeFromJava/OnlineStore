@@ -90,52 +90,61 @@ ul a:hover {
     display: flex;
     flex-direction: column;
     height: 100%;
-}
-
-.content {
-    flex: 1 0 auto;
-
-    width: 1200px;
-    margin: 30px auto;
-
-    .button_buy {
-        background-color: #4CAF50;
-        border: 1px solid green;
-        border-radius: 7px;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-    }
+    .content {
+        flex: 1 0 auto;
     
-    .button_buy:hover {
-        background-color: #56c95a;
-    }
+        width: 1200px;
+        margin: 30px auto;
     
-    .button_buy:active {
-        background-color: #367e39;
-    }
-
-    .main {
-        text-align: center;
-        height: 500px;
-
-        h1,
-        h2 {
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            color: rgb(7, 71, 36);
+        #basket {
+            border: 1px solid black;
+            border-collapse: collapse; 
+            td, th {
+                border: 1px solid black;
+            }
         }
-
-        .login-info p {
-            font-size: 20px;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+        .button_buy {
+            background-color: #4CAF50;
+            border: 1px solid green;
+            border-radius: 7px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
         }
-    }
-
-    table {
-        color: red;
+    
+        .button_buy:hover {
+            background-color: #56c95a;
+        }
+    
+        .button_buy:active {
+            background-color: #367e39;
+        }
+    
+        .main {
+            text-align: center;
+            height: 500px;
+    
+            h1,
+            h2 {
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                color: rgb(7, 71, 36);
+            }
+    
+            .login-info p {
+                font-size: 20px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+        }
+    
+        .f_price {
+            color: rgb(10, 51, 13);
+            font-size: 30px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
     }
 }
 
@@ -218,12 +227,6 @@ ul a:hover {
 
 .menu {
     list-style-type: none;
-}
-
-.price {
-    color: rgb(10, 51, 13);
-    font-size: 30px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .registr,

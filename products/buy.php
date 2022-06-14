@@ -19,6 +19,7 @@ $arTitle = [
     "IMAGE" => "Изображение",
     "COUNT" => "Количество"
 ];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,33 +39,31 @@ $arTitle = [
         <?php require_once $header_path; ?>
 
         <div class="content">
-            <pre>
-                <?php //print_r($arBasket); ?>
-       <table width="100%" id="basket">
-        <thead>
-            <tr>
-                <?php
-                $arProduct = current($arBasket);
-                foreach ($arProduct as $key => $field) {
-                    if ($key == "ID") continue;
-                    $title = $arTitle[$key]; ?>
-                    <th class = "<?= $key ?>"><?= $title ?></th>
-                <?php } ?>   
-            </tr>
-        </thead>
-        <?php foreach ($arBasket as $arProduct) {
-        ?>
-            <tr>
-                <?php foreach ($arProduct as $key => $field) {
-                    if ($key == "ID") continue;
+            <?php //print_r($arBasket); 
+            ?>
+            <table width="100%" id="basket">
+                <thead>
+                    <tr>
+                        <?php
+                        $arProduct = current($arBasket);
+                        foreach ($arProduct as $key => $field) {
+                            if ($key == "ID") continue;
+                            $title = $arTitle[$key]; ?>
+                            <th class="<?= $key ?>"><?= $title ?></th>
+                        <?php } ?>
+                    </tr>
+                </thead>
+                <?php foreach ($arBasket as $arProduct) {
                 ?>
-                    <td class = "<?= $key ?>"><?= $field ?></td>
-                    <?php } ?>
-            </tr>
-    <?php } ?>
-
-       </table>
-    </pre>
+                    <tr>
+                        <?php foreach ($arProduct as $key => $field) {
+                            if ($key == "ID") continue;
+                        ?>
+                            <td class="<?= $key ?>"><?= $field ?></td>
+                        <?php } ?>
+                    </tr>
+                <?php } ?>
+            </table>
         </div>
 
         <?php require_once $footer_path; ?>

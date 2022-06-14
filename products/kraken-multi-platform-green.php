@@ -27,7 +27,7 @@ require_once '../main/productSQL.php';
 
       <p>ОБНОВЛЕННАЯ КУЛЬТОВАЯ ИГРОВАЯ ГАРНИТУРА</p>
       <p class=" short_desc"><?= $currentShortDescription ?></p>
-      <div class="price">
+      <div class="f_price">
         <p>Цена: <?= $currentPrice ?> рублей</p>
       </div>
       <a href="../buy.php?product=<?= $currentID ?>" class="button_buy">Купить</a>

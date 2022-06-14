@@ -3,53 +3,98 @@ if (!isset($_SESSION)) {
   session_start();
 }
 
+$arMenu = [
+  [
+    "name" => "Регистрация",
+    "link" => "/profile/registration.php"
+  ],
+  [
+    "name" => "Главная",
+    "link" => "/index.php"
+  ],
+  [
+    "name" => "Каталог",
+    "link" => "/catalog.php"
+  ],
+  [
+    "name" => "Контакты",
+    "link" => "/contacts.php"
+  ]
+];
+
 if (isset($_SESSION['name'])) {
-  $arMenu = [
-    [
-      "name" => "Регистрация",
-      "link" => "/profile/registration.php"
-    ],
-    [
-      "name" => "Главная",
-      "link" => "/index.php"
-    ],
-    [
-      "name" => "Каталог",
-      "link" => "/catalog.php"
-    ],
-    [
-      "name" => "Контакты",
-      "link" => "/contacts.php"
-    ],
+  $arMenuLogin = [
     [
       "name" => $_SESSION['name'] . ' [Выход]',
       "link" => "/profile/logout.php"
+    ],
+    [
+      "name" => 'Корзина',
+      "link" => "/products/buy.php"
     ]
   ];
 } else {
-  $arMenu = [
-    [
-      "name" => "Регистрация",
-      "link" => "/profile/registration.php"
-    ],
-    [
-      "name" => "Главная",
-      "link" => "/index.php"
-    ],
-    [
-      "name" => "Каталог",
-      "link" => "/catalog.php"
-    ],
-    [
-      "name" => "Контакты",
-      "link" => "/contacts.php"
-    ],
+  $arMenuLogout = [
     [
       "name" => 'Авторизация',
       "link" => "/profile/login.php"
     ]
   ];
 }
+
+if (isset($_SESSION['name'])) {
+  $arMenu = array_merge($arMenu, $arMenuLogin);
+} else {
+  $arMenu = array_merge($arMenu, $arMenuLogout);
+}
+
+// if (isset($_SESSION['name'])) {
+//   $arMenu = [
+//     [
+//       "name" => "Регистрация",
+//       "link" => "/profile/registration.php"
+//     ],
+//     [
+//       "name" => "Главная",
+//       "link" => "/index.php"
+//     ],
+//     [
+//       "name" => "Каталог",
+//       "link" => "/catalog.php"
+//     ],
+//     [
+//       "name" => "Контакты",
+//       "link" => "/contacts.php"
+//     ],
+//     [
+//       "name" => $_SESSION['name'] . ' [Выход]',
+//       "link" => "/profile/logout.php"
+//     ]
+//   ];
+// } else {
+//   $arMenu = [
+//     [
+//       "name" => "Регистрация",
+//       "link" => "/profile/registration.php"
+//     ],
+//     [
+//       "name" => "Главная",
+//       "link" => "/index.php"
+//     ],
+//     [
+//       "name" => "Каталог",
+//       "link" => "/catalog.php"
+//     ],
+//     [
+//       "name" => "Контакты",
+//       "link" => "/contacts.php"
+//     ],
+//     [
+//       "name" => 'Авторизация',
+//       "link" => "/profile/login.php"
+//     ]
+//   ];
+// }
 
 ?>
 

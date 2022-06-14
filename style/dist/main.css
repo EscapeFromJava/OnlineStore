@@ -71,12 +71,20 @@ ul a:hover {
   flex-direction: column;
   height: 100%;
 }
-.content {
+.container .content {
   flex: 1 0 auto;
   width: 1200px;
   margin: 30px auto;
 }
-.content .button_buy {
+.container .content #basket {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.container .content #basket td,
+.container .content #basket th {
+  border: 1px solid black;
+}
+.container .content .button_buy {
   background-color: #4CAF50;
   border: 1px solid green;
   border-radius: 7px;
@@ -87,27 +95,29 @@ ul a:hover {
   display: inline-block;
   font-size: 16px;
 }
-.content .button_buy:hover {
+.container .content .button_buy:hover {
   background-color: #56c95a;
 }
-.content .button_buy:active {
+.container .content .button_buy:active {
   background-color: #367e39;
 }
-.content .main {
+.container .content .main {
   text-align: center;
   height: 500px;
 }
-.content .main h1,
-.content .main h2 {
+.container .content .main h1,
+.container .content .main h2 {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: #074724;
 }
-.content .main .login-info p {
+.container .content .main .login-info p {
   font-size: 20px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.content table {
-  color: red;
+.container .content .f_price {
+  color: #0a330d;
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .descrip {
   border: 2px solid black;
@@ -173,11 +183,6 @@ ul a:hover {
 }
 .menu {
   list-style-type: none;
-}
-.price {
-  color: #0a330d;
-  font-size: 30px;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .registr,
 .login {
