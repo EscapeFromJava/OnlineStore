@@ -21,7 +21,7 @@ if (isset($_SESSION['name'])) {
       "link" => "/contacts.php"
     ],
     [
-      "name" => $_SESSION['name'],
+      "name" => $_SESSION['name'] . ' [Выход]',
       "link" => "/profile/logout.php"
     ]
   ];

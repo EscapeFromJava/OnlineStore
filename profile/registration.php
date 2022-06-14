@@ -1,25 +1,5 @@
 <?php
 include '../main/paths.php';
-require_once ($_SERVER["DOCUMENT_ROOT"] . '/main/dbconnector.php');
-
-if (!empty($_POST)) {
-    
-    $passwordHash = password_hash($_POST['password'], PASSWORD_DEFAULT);
-    $login = $_POST['login'];
-    $fio = $_POST['fio'];
-    $email = $_POST['email'];
-
-    $sql = "INSERT INTO `users`(`FIO`, `LOGIN`, `EMAIL`, `PASS_WORD`) VALUES ('{$fio}','{$login}','{$email}','{$passwordHash}')";
-    $result = mysqli_query($link, $sql);
-    if ($result == false) {
-        // print("Произошла ошибка при выполнении запроса<br>");
-        // print mysqli_error($link);
-    } else {
-        $userID = mysqli_insert_id($link);
-        // print("Запись '$userID' успешно добавлена!<br>");
-    }
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,7 +24,7 @@ if (!empty($_POST)) {
             <div class="main">
                 <h1>Регистрация</h1>
                 <div class="registr">
-                    <form action="../profile/registration.php" method="POST" enctype="multipart/form-data">
+                    <form action="../main/registration.php" method="POST" enctype="multipart/form-data">
                         <fieldset>
                             <p>Имя *</p>
                             <p><input type="text" name="fio"></p>
