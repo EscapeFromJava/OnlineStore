@@ -44,22 +44,6 @@ $arProducts = mysqli_fetch_all($result, MYSQLI_ASSOC);
         <?php
         }
         ?>
-
-        <!-- <div class="cat_keyboard">
-          <img src="/img/blackwidow-v3-mini-hyperspeed-phantom.jpg" alt="Blackwidow v3 Mini Hyperspeed Phantom">
-          <p class="categ"><a href="/products/blackwidow-v3-mini-hyperspeed-phantom.php">Клавиатура Blackwidow v3 Mini Hyperspeed Phantom</a></p>
-        </div>
-
-        <div class="cat_mouse">
-          <img src="img/deathadder-pro-v2.jpg" alt="Deathhadder Pro V2">
-          <p class="categ"><a href="/products/deathadder-pro-v2.php">Мышь DEATHHADDER PRO V2</a></p>
-        </div>
-
-        <div class="cat_headphone">
-          <img src="/img/kraken-multi-platform-green.jpg" alt="Deathhadder Pro V2">
-          <p class="categ"><a href="/products/kraken-multi-platform-green.php">Наушники KRAKEN MULTI-PLATFORM
-              GREEN</a></p>
-        </div> -->
       </div>
     </div>
 

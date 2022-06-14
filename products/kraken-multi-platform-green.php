@@ -30,7 +30,7 @@ require_once '../main/productSQL.php';
       <div class="price">
         <p>Цена: <?= $currentPrice ?> рублей</p>
       </div>
-      <input class="button_buy" type="button" value="Купить">
+      <a href="../buy.php?product=<?= $currentID ?>" class="button_buy">Купить</a>
 
       <h2 id="block_h2">Характеристики товара</h2>
 

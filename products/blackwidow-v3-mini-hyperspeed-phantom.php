@@ -26,11 +26,11 @@ require_once '../main/productSQL.php';
       <a href="<?= $currentImage ?>" target="_blank"><img src="<?= $currentImage ?>" alt="RAZER BLACKWIDOW V3 MINI HYPERSPEED - PHANTOM EDITION"></a>
 
       <p>СВОБОДА В ФОРМЕ</p>
-      <p class=" short_desc"><?= $currentShortDescription ?></p>
+      <p class="short_desc"><?= $currentShortDescription ?></p>
       <div class="price">
         <p>Цена: <?= $currentPrice ?> рублей</p>
       </div>
-      <input class="button_buy" type="button" value="Купить">
+      <a href="../buy.php?product=<?= $currentID ?>" class="button_buy">Купить</a>
 
       <h2 id="block_h2">Характеристики товара</h2>
 

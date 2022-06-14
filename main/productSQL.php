@@ -7,13 +7,14 @@ require_once($_SERVER["DOCUMENT_ROOT"] . '/main/dbconnector.php');
 $sql = "SELECT * FROM products WHERE ID = {$currentID};";
 $result = mysqli_query($link, $sql);
 
-$arProduct = mysqli_fetch_array($result, MYSQLI_ASSOC);
+$arProducts = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-$currentID = $arProduct['ID'];
-$currentName = $arProduct['NAME'];
-$currentShortDescription = $arProduct['SHORT_DESCRIPTION'];
-$currentDescription = $arProduct['DESCRIPTION'];
-$currentImage = $arProduct['IMAGE'];
-$currentPrice = $arProduct['PRICE'];
-
+foreach ($arProducts as $key => $value) {
+    $currentID = $arProducts[$key]['ID'];
+    $currentName = $arProducts[$key]['NAME'];
+    $currentShortDescription = $arProducts[$key]['SHORT_DESCRIPTION'];
+    $currentDescription = $arProducts[$key]['DESCRIPTION'];
+    $currentImage = $arProducts[$key]['IMAGE'];
+    $currentPrice = $arProducts[$key]['PRICE'];
+  }
 ?>

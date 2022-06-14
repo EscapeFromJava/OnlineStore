@@ -49,26 +49,11 @@ ul a:hover {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   resize: none;
 }
-.button_buy {
-  background-color: #4CAF50;
-  border: 1px solid green;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
-.button_buy:hover {
-  background-color: #56c95a;
-}
-.button_buy:active {
-  background-color: #367e39;
-}
 .cat {
   display: inline;
   margin-left: 20px;
   margin-right: 20px;
+  font-weight: 900;
 }
 .category img {
   border: 2px solid #023d0f;
@@ -91,6 +76,23 @@ ul a:hover {
   width: 1200px;
   margin: 30px auto;
 }
+.content .button_buy {
+  background-color: #4CAF50;
+  border: 1px solid green;
+  border-radius: 7px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.content .button_buy:hover {
+  background-color: #56c95a;
+}
+.content .button_buy:active {
+  background-color: #367e39;
+}
 .content .main {
   text-align: center;
   height: 500px;
@@ -103,6 +105,9 @@ ul a:hover {
 .content .main .login-info p {
   font-size: 20px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.content table {
+  color: red;
 }
 .descrip {
   border: 2px solid black;

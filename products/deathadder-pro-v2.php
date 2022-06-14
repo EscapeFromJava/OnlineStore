@@ -18,18 +18,19 @@ require_once '../main/productSQL.php';
 
   <div class="container">
 
-  <?php require_once $header_path;?>
+    <?php require_once $header_path; ?>
 
     <div class="content">
       <h1 id="block_h1"><?= $currentName ?></h1>
+
       <a href="<?= $currentImage ?>" target="_blank"><img src="<?= $currentImage ?>" alt="DEATHHADDER PRO V2"></a>
 
       <p>НЕСРАВНЕННАЯ ЭРГОНОМИКА. БЕЗ ОГРАНИЧЕНИЙ</p>
       <p class="short_desc"><?= $currentShortDescription ?></p>
       <div class="price">
-      <p>Цена: <?= $currentPrice ?> рублей</p>
+        <p>Цена: <?= $currentPrice ?> рублей</p>
       </div>
-      <input class="button_buy" type="button" value="Купить">
+      <a href="../buy.php?product=<?= $currentID ?>" class="button_buy">Купить</a>
 
       <h2 id="block_h2">Характеристики товара</h2>
 
@@ -104,7 +105,7 @@ require_once '../main/productSQL.php';
 
     </div>
 
-    <?php require_once $footer_path;?>
+    <?php require_once $footer_path; ?>
 
   </div>
 
