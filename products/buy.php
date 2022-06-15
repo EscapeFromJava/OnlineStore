@@ -2,23 +2,28 @@
 include '../main/paths.php';
 session_start();
 require_once($_SERVER["DOCUMENT_ROOT"] . '/main/dbconnector.php');
-$productId = (int)$_GET["product"];
-if ($productId > 0) {
-    $sql = "SELECT ID, NAME, SHORT_DESCRIPTION, PRICE, IMAGE FROM products WHERE ID = {$productId};";
-    $result = mysqli_query($link, $sql);
-    $arProduct = mysqli_fetch_array($result, MYSQLI_ASSOC);
-    $arProduct["COUNT"] = @$_SESSION['BASKET'][$arProduct["ID"]]["COUNT"] ? $_SESSION['BASKET'][$arProduct["ID"]]["COUNT"] + 1 : 1;
-    unset($arProduct["DESCRIPTION"]);
-    $_SESSION['BASKET'][$arProduct["ID"]] = $arProduct;
+
+if (isset($_GET["product"])) {
+    $productId = (int)$_GET["product"];
+    if ($productId > 0) {
+        $sql = "SELECT ID, NAME, SHORT_DESCRIPTION, PRICE, IMAGE FROM products WHERE ID = {$productId};";
+        $result = mysqli_query($link, $sql);
+        $arProduct = mysqli_fetch_array($result, MYSQLI_ASSOC);
+        $arProduct["COUNT"] = @$_SESSION['BASKET'][$arProduct["ID"]]["COUNT"] ? $_SESSION['BASKET'][$arProduct["ID"]]["COUNT"] + 1 : 1;
+        unset($arProduct["DESCRIPTION"]);
+        $_SESSION['BASKET'][$arProduct["ID"]] = $arProduct;
+    }
 }
-$arBasket = $_SESSION['BASKET'];
-$arTitle = [
-    "NAME" => "Товар",
-    "SHORT_DESCRIPTION" => "Описание",
-    "PRICE" => "Цена",
-    "IMAGE" => "Изображение",
-    "COUNT" => "Количество"
-];
+if (isset($_SESSION['BASKET'])) {
+    $arBasket = $_SESSION['BASKET'];
+    $arTitle = [
+        "NAME" => "Товар",
+        "SHORT_DESCRIPTION" => "Описание",
+        "PRICE" => "Цена",
+        "IMAGE" => "Изображение",
+        "COUNT" => "Количество"
+    ];
+}
 
 ?>
 <!DOCTYPE html>
@@ -39,30 +44,35 @@ $arTitle = [
         <?php require_once $header_path; ?>
 
         <div class="content">
-            <?php //print_r($arBasket); 
-            ?>
+
+            <h1>Корзина</h1>
             <table width="100%" id="basket">
                 <thead>
                     <tr>
                         <?php
-                        $arProduct = current($arBasket);
-                        foreach ($arProduct as $key => $field) {
-                            if ($key == "ID") continue;
-                            $title = $arTitle[$key]; ?>
-                            <th class="<?= $key ?>"><?= $title ?></th>
-                        <?php } ?>
+                        if (isset($arBasket)) {
+                            $arProduct = current($arBasket);
+                            foreach ($arProduct as $key => $field) {
+                                if ($key == "ID") continue;
+                                $title = $arTitle[$key]; ?>
+                                <th class="<?= $key ?>"><?= $title ?></th>
+                            <?php }
+                            ?>
                     </tr>
                 </thead>
                 <?php foreach ($arBasket as $arProduct) {
                 ?>
                     <tr>
                         <?php foreach ($arProduct as $key => $field) {
-                            if ($key == "ID") continue;
+                                    if ($key == "ID") continue;
                         ?>
                             <td class="<?= $key ?>"><?= $field ?></td>
                         <?php } ?>
                     </tr>
-                <?php } ?>
+                <?php }
+                        } else {
+                ?><center>Ваша корзина пуста!</center><?php
+                                                    } ?>
             </table>
         </div>
 

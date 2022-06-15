@@ -48,54 +48,6 @@ if (isset($_SESSION['name'])) {
   $arMenu = array_merge($arMenu, $arMenuLogout);
 }
 
-// if (isset($_SESSION['name'])) {
-//   $arMenu = [
-//     [
-//       "name" => "Регистрация",
-//       "link" => "/profile/registration.php"
-//     ],
-//     [
-//       "name" => "Главная",
-//       "link" => "/index.php"
-//     ],
-//     [
-//       "name" => "Каталог",
-//       "link" => "/catalog.php"
-//     ],
-//     [
-//       "name" => "Контакты",
-//       "link" => "/contacts.php"
-//     ],
-//     [
-//       "name" => $_SESSION['name'] . ' [Выход]',
-//       "link" => "/profile/logout.php"
-//     ]
-//   ];
-// } else {
-//   $arMenu = [
-//     [
-//       "name" => "Регистрация",
-//       "link" => "/profile/registration.php"
-//     ],
-//     [
-//       "name" => "Главная",
-//       "link" => "/index.php"
-//     ],
-//     [
-//       "name" => "Каталог",
-//       "link" => "/catalog.php"
-//     ],
-//     [
-//       "name" => "Контакты",
-//       "link" => "/contacts.php"
-//     ],
-//     [
-//       "name" => 'Авторизация',
-//       "link" => "/profile/login.php"
-//     ]
-//   ];
-// }
-
 ?>
 
 <div class="header">
@@ -107,6 +59,8 @@ if (isset($_SESSION['name'])) {
         <li><a style="color: yellow;" href="<?= $item["link"] ?> "><?= $item["name"] ?></a></li>
       <?php } else if ($item["name"] == "Авторизация") { ?>
         <li><a style="color: red;" href="<?= $item["link"] ?> "><?= $item["name"] ?></a></li>
+      <?php } else if ($item["name"] == "Корзина") { ?>
+        <li><a style="color: purple;" href="<?= $item["link"] ?> "><?= $item["name"] ?></a></li>
       <?php } else { ?>
         <li><a href="<?= $item["link"] ?>"><?= $item["name"] ?></a></li>
     <?php }

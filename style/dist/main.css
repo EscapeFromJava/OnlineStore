@@ -119,6 +119,12 @@ ul a:hover {
   font-size: 30px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+.container .content h1 {
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #16222A;
+}
 .descrip {
   border: 2px solid black;
   border-spacing: 0px;

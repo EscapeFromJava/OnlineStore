@@ -37,7 +37,7 @@ if ($productId > 0) {
 
             <h1 id="block_h1"><?= $currentName ?></h1>
 
-            <a href="<?= $currentImage ?>" target="_blank"><img src="<?= $currentImage ?>" alt="KRAKEN MULTI-PLATFORM GREEN"></a>
+            <a href="<?= $currentImage ?>" target="_blank"><img src="<?= $currentImage ?>" alt="<?= $currentName ?>"></a>
 
             <p class=" short_desc"><?= $currentShortDescription ?></p>
 
