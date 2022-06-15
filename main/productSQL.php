@@ -13,6 +13,7 @@ foreach ($arProducts as $key => $value) {
     $currentID = $arProducts[$key]['ID'];
     $currentName = $arProducts[$key]['NAME'];
     $currentShortDescription = $arProducts[$key]['SHORT_DESCRIPTION'];
+    $currentSpecifications = $arProducts[$key]['SPECIFICATIONS'];
     $currentDescription = $arProducts[$key]['DESCRIPTION'];
     $currentImage = $arProducts[$key]['IMAGE'];
     $currentPrice = $arProducts[$key]['PRICE'];

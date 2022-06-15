@@ -33,13 +33,10 @@ $arProducts = mysqli_fetch_all($result, MYSQLI_ASSOC);
           $currentID = $arProducts[$key]['ID'];
           $currentName = $arProducts[$key]['NAME'];
           $currentImage = $arProducts[$key]['IMAGE'];
-          $link = str_replace('/img', '/products', $currentImage);
-          $link = substr($link, 0, -3);
-          $link .= 'php';
         ?>
           <div class="cat">
             <img src="<?= $currentImage ?>" alt="">
-            <p class="categ"><a href="<?= $link . '/id=' . $currentID ?>"><?= $currentName ?></a></p>
+            <p class="categ"><a href="/products/product.php?id=<?= $currentID ?>"><?= $currentName ?></a></p>
           </div>
         <?php
         }
