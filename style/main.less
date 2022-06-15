@@ -97,13 +97,36 @@ ul a:hover {
         width: 1200px;
         margin: 30px auto;
 
-        #basket {
-            border: 1px solid black;
-            border-collapse: collapse;
 
-            td,
-            th {
-                border: 1px solid black;
+        #basket {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 4px;
+            background-color: #053116;
+            border-radius: 5px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+
+            thead {
+                tr {
+                    color: #3fa70f;
+                    font-weight: bold;
+                }
+            }
+
+            tbody {
+                tr {
+                    td {
+                        border: 1px solid #074d07;
+                        border-radius: 4px;
+                        background: #5bb15f;
+                    }
+
+                    td:hover {
+                        background: #5f817f;
+                        transition-duration: 0.2s;
+                    }
+                }
             }
         }
 

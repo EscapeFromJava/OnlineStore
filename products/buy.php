@@ -65,14 +65,19 @@ if (isset($_SESSION['BASKET'])) {
                     <tr>
                         <?php foreach ($arProduct as $key => $field) {
                                     if ($key == "ID") continue;
+                                    if ($key == "IMAGE") {
                         ?>
+                                <td class="<?= $key ?>"><img src="<?= $field ?>" width="100px" alt=""></td>
+                            <?php continue;
+                                    } else
+                            ?>
                             <td class="<?= $key ?>"><?= $field ?></td>
                         <?php } ?>
                     </tr>
                 <?php }
                         } else {
                 ?><center>Ваша корзина пуста!</center><?php
-                                                    } ?>
+                                                        } ?>
             </table>
         </div>
 

@@ -77,12 +77,26 @@ ul a:hover {
   margin: 30px auto;
 }
 .container .content #basket {
-  border: 1px solid black;
-  border-collapse: collapse;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 4px;
+  background-color: #053116;
+  border-radius: 5px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
 }
-.container .content #basket td,
-.container .content #basket th {
-  border: 1px solid black;
+.container .content #basket thead tr {
+  color: #3fa70f;
+  font-weight: bold;
+}
+.container .content #basket tbody tr td {
+  border: 1px solid #074d07;
+  border-radius: 4px;
+  background: #5bb15f;
+}
+.container .content #basket tbody tr td:hover {
+  background: #5f817f;
+  transition-duration: 0.2s;
 }
 .container .content .button_buy {
   background-color: #4CAF50;
