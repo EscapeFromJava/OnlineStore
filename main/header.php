@@ -31,6 +31,10 @@ if (isset($_SESSION['name'])) {
     [
       "name" => 'Корзина',
       "link" => "/products/buy.php"
+    ],
+    [
+      "name" => 'Оформить заказ',
+      "link" => "/products/get_order.php"
     ]
   ];
 } else {

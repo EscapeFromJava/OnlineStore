@@ -56,7 +56,7 @@ function save_basket()
         if ($success) {
             unset($_SESSION["BASKET"]);
         } else {
-            print("Корзина не сохранена<br>");
+            return "Корзина пустая";
         }
     }
 }
@@ -64,21 +64,27 @@ function save_basket()
 function save_basket_product($basketID)
 {
     global $link;
-    $arBasket = $_SESSION["BASKET"];
-    foreach ($arBasket as $arProduct) {
-        $productID = $arProduct["ID"];
-        $sql = "INSERT INTO product_basket SET BASKET_ID = {$basketID}, PRODUCT_ID = {$productID}";
-        $result =  mysqli_query($link, $sql);
-        if ($result == false) {
-            print("ошибка");
-            print mysqli_error($link);
-            return false;
+    if (isset($_SESSION["BASKET"])) {
+        $arBasket = $_SESSION["BASKET"];
+
+        foreach ($arBasket as $arProduct) {
+            $productID = $arProduct["ID"];
+            $sql = "INSERT INTO product_basket SET BASKET_ID = {$basketID}, PRODUCT_ID = {$productID}";
+            $result =  mysqli_query($link, $sql);
+            if ($result == false) {
+                print("ошибка");
+                print mysqli_error($link);
+                return false;
+            } else {
+                return "Заказ успешно создан!";
+            }
         }
+        return true;
     }
-    return true;
 }
 
-function save_order($arFields) {
+function save_order($arFields)
+{
     global $link;
     $arUserLogin = $_SESSION["login"];
     $sql = "SELECT ID FROM users WHERE LOGIN = '{$arUserLogin}';";

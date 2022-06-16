@@ -91,6 +91,14 @@ ul a:hover {
     flex-direction: column;
     height: 100%;
 
+    background: linear-gradient(200deg, #72c06b, #214021);
+
+    background-size: 500% 500%;
+    -webkit-animation: ServiceAnimation 10s ease infinite;
+    -moz-animation: ServiceAnimation 10s ease infinite;
+    -o-animation: ServiceAnimation 10s ease infinite;
+    animation: ServiceAnimation 10s ease infinite;
+
     .content {
         flex: 1 0 auto;
 
@@ -181,6 +189,62 @@ ul a:hover {
     }
 }
 
+@-webkit-keyframes ServiceAnimation {
+    0% {
+        background-position: 90% 0
+    }
+
+    50% {
+        background-position: 10% 100%
+    }
+
+    100% {
+        background-position: 90% 0
+    }
+}
+
+@-moz-keyframes ServiceAnimation {
+    0% {
+        background-position: 90% 0
+    }
+
+    50% {
+        background-position: 10% 100%
+    }
+
+    100% {
+        background-position: 90% 0
+    }
+}
+
+@-o-keyframes ServiceAnimation {
+    0% {
+        background-position: 90% 0
+    }
+
+    50% {
+        background-position: 10% 100%
+    }
+
+    100% {
+        background-position: 90% 0
+    }
+}
+
+@keyframes ServiceAnimation {
+    0% {
+        background-position: 90% 0
+    }
+
+    50% {
+        background-position: 10% 100%
+    }
+
+    100% {
+        background-position: 90% 0
+    }
+}
+
 .descrip {
     border: 2px solid black;
     border-spacing: 0px;
@@ -234,7 +298,18 @@ ul a:hover {
     background: linear-gradient(to right, #3A6073, #16222A);
 
     a {
-        color: white;
+        color: #ffffff; /* Цвет текста */
+        padding: 10px; /* Поля вокруг текста */
+        transition: 0.2s linear; /* Время изменения */
+        border-radius: 10px;
+    }
+
+    a:hover {
+        // c-webkit-filter: invert(100%);
+        filter: invert(15%);
+        background: #005f3f; /* Цвет фона */
+        border-radius: 10px;
+        font-size: 25px;
     }
 
     ul {

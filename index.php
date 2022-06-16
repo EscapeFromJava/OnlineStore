@@ -26,13 +26,6 @@ include 'main/functions.php';
       <div class="main">
         <h1>GADJET MARKET</h1>
         <h2>Интернет-магазин компьютеров и компьютерных комплектующих</h2>
-
-        <?php
-
-        save_basket();
-
-        ?>
-
       </div>
     </div>
 
