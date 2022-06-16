@@ -21,15 +21,9 @@ while ($row = mysqli_fetch_array($result)) {
     ];
 }
 
-foreach ($userSQL as $key => $value) {
-    if ($key == 'FIO') {
-        $fioSQL = $value;
-    } else if ($key == 'LOGIN') {
-        $loginSQL = $value;
-    } else if ($key == 'PASSWORD') {
-        $passwordSQL = $value;
-    }
-}
+$fioSQL = $userSQL["FIO"];
+$loginSQL = $userSQL["LOGIN"];
+$passwordSQL = $userSQL["PASSWORD"];
 
 if (!isset($_SESSION)) {
     session_start();
