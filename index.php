@@ -1,5 +1,6 @@
 <?php
 include 'main/paths.php';
+include 'main/functions.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,6 +26,13 @@ include 'main/paths.php';
       <div class="main">
         <h1>GADJET MARKET</h1>
         <h2>Интернет-магазин компьютеров и компьютерных комплектующих</h2>
+
+        <?php
+
+        save_basket();
+
+        ?>
+
       </div>
     </div>
 
